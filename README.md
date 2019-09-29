@@ -1,4 +1,6 @@
 # JuliaDocker
-Julia Docker File for Data
+Julia with basic packages for data tasks
 
-Includes a Base Docker File with Basic Packages and a Dev Docker File with Jupyterlab
+Base: Basic packages
+Dev: adds jupyterlab on top of base
+
