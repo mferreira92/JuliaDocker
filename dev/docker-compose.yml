@@ -6,6 +6,8 @@ services:
     container_name: julia
     links:
       - mongo
+    ports:
+      - "1088:8888"
     networks:
       - julia-mongo-network
 
