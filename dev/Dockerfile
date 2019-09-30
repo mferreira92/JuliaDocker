@@ -18,6 +18,8 @@ RUN pip3 install jupyterlab && jupyter serverextension enable --py jupyterlab
 RUN julia -e "import Pkg;Pkg.add(\"IJulia\")" && \
     julia -e "import Pkg;Pkg.build(\"IJulia\")"
 
-RUN mkdir workspace
+ENV DIR /workspace
+RUN mkdir $DIR
+WORKDIR $DIR
+CMD jupyter lab --ip=* --port=8888 --no-browser --allow-root --notebook-dir=$DIR
 
-CMD jupyter lab --ip=* --port=8888 --no-browser --allow-root --notebook-dir=/workspace
