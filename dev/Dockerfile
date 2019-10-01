@@ -1,10 +1,7 @@
 FROM antonioloureiro/julia:latest
 
 RUN apt-get update
-RUN apt-get install -y python3
-RUN apt-get install -y python3-pip
-RUN apt-get install -y telnet
-RUN apt-get install -y iputils-ping
+RUN apt-get install -y python3 python3-pip telnet ping git wget
 
 # Install Jupyter
 RUN pip3 install jupyter
