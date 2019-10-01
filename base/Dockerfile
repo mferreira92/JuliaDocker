@@ -9,4 +9,6 @@ RUN julia -e "import Pkg;Pkg.add(\"DataFrames\")" && \
     julia -e "import Pkg;Pkg.add(\"JSON\")" && \
     julia -e "import Pkg;Pkg.add(\"HTTP\")" && \
     julia -e "import Pkg;Pkg.add(\"JLD2\")" && \
+    julia -e "import Pkg;Pkg.add(\"Plots\")" && \
+    julia -e "import Pkg;Pkg.add(\"DataStructures\")" && \
     julia -e "import Pkg;Pkg.add(\"WebSockets\")"
