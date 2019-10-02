@@ -10,9 +10,7 @@ services:
     ports:
     - "${PORT_PREFIX}88:8888"  # jupyter
     - "${PORT_PREFIX}80:80"  # interface web
-    links:
-      - mongo
-
+ 
   mongo:
     image: mongo
     container_name: mongo
