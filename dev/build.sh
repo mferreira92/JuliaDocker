@@ -24,6 +24,7 @@ fi
 
 ## Deploy image with full development stack
 sudo docker pull antonioloureiro/julia_dev
+sudo docker pull mongo
 
 ##Access "Docker" directory and execute:
 sudo PORT_PREFIX=$port_number_prefix STACK=$stack docker-compose -p $stack up -d
