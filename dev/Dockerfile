@@ -1,7 +1,7 @@
 FROM antonioloureiro/julia:latest
 
 RUN apt-get update
-RUN apt-get install -y python3 python3-pip telnet ping git wget nano net-tools zip unzip vim
+RUN apt-get install -y python3 python3-pip telnet git wget nano net-tools zip unzip vim
 
 
 # Install Jupyter
