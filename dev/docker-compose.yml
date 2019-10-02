@@ -3,20 +3,16 @@ version: '3'
 services:
   julia:
     image: antonioloureiro/julia_dev
-    container_name: julia
-    links:
-      - mongo
+    container_name: "${STACK}_dev"
+    volumes:
+      - /docker_machines_data/{$STACK}/workspace:/workspace
+      - /etc/ssl/certs:/etc/ssl/certs
     ports:
-      - "1088:8888"
-    networks:
-      - julia-mongo-network
-
+    - "${PORT_PREFIX}88:8888"  # jupyter
+    - "${PORT_PREFIX}80:80"  # interface web
+ 
   mongo:
     image: mongo
     container_name: mongo
-    networks:
-      - julia-mongo-network
-
-networks: 
-    julia-mongo-network:
-      driver: bridge
+    volumes:
+      - /docker_machines_data/${STACK}/db:/data/db
