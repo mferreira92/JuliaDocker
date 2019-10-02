@@ -15,6 +15,6 @@ services:
 
   mongo:
     image: mongo
-    container_name: "${STACK}_db"
+    container_name: mongo
     volumes:
       - /docker_machines_data/${STACK}/db:/data/db
